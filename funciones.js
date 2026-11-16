@@ -4,8 +4,8 @@
    ============================================================ */
 
 const FECHAS = {
-    misa:      '2027-01-16T17:00:00-06:00',   // ← cambia por la fecha y hora de la misa
-    recepcion: '2027-01-16T20:00:00-06:00'    // ← cambia por la fecha y hora de la recepción
+    misa:      '2026-12-16T17:00:00-16:00',   // ← cambia por la fecha y hora de la misa
+    recepcion: '2026-12-16T20:00:00-17:00'    // ← cambia por la fecha y hora de la recepción
 };
 
 const VOLUMEN_MUSICA = 0.6;   // de 0 (silencio) a 1 (máximo)
