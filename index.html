@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#f8f3ee">
 
     <title>Mis XV años | Erika Darlen</title>
@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="quinceanera.jpg">
     <link rel="stylesheet" href="style.css">
     <script src="funciones.js" defer></script>
 </head>
@@ -25,7 +26,6 @@
     <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
         <defs>
 
-            <!-- Rosa / peonía (el color se cambia con "color" en cada uso) -->
             <symbol id="rosa" viewBox="-50 -50 100 100">
                 <g fill="currentColor">
                     <circle cx="30" cy="0" r="17"/>
@@ -44,7 +44,6 @@
                       fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/>
             </symbol>
 
-            <!-- Margarita blanca -->
             <symbol id="margarita" viewBox="-50 -50 100 100">
                 <g fill="#fffdf9" stroke="#e5d9c8" stroke-width="1.2">
                     <ellipse cx="0" cy="-31" rx="9" ry="19"/>
@@ -64,7 +63,6 @@
                 <circle r="6" fill="#d9a233" opacity=".55"/>
             </symbol>
 
-            <!-- Nomeolvides (florecitas azules) -->
             <symbol id="nomeolvides" viewBox="-20 -20 40 40">
                 <g fill="#8fc4e6">
                     <circle cx="0" cy="-9" r="7.5"/>
@@ -76,38 +74,33 @@
                 <circle r="3.6" fill="#f6d365"/>
             </symbol>
 
-            <!-- Hoja -->
             <symbol id="hoja" viewBox="0 0 44 80">
                 <path d="M22 78 C-6 56 -3 20 22 2 C47 20 50 56 22 78Z" fill="#9db38a"/>
                 <path d="M22 76 C22 55 22 30 22 8" fill="none" stroke="#7f966e" stroke-width="1.4" stroke-linecap="round"/>
                 <path d="M22 60 L10 48 M22 46 L11 34 M22 60 L34 48 M22 46 L33 34" fill="none" stroke="#7f966e" stroke-width="1" stroke-linecap="round" opacity=".7"/>
             </symbol>
 
-            <!-- Capullo -->
             <symbol id="capullo" viewBox="0 0 30 44">
                 <path d="M15 42 C-2 32 0 12 15 2 C30 12 32 32 15 42Z" fill="currentColor"/>
                 <path d="M15 40 C9 30 9 16 15 6 C21 16 21 30 15 40Z" fill="#fff" opacity=".22"/>
             </symbol>
 
-            <!-- Mariposa -->
             <symbol id="mariposa" viewBox="-30 -25 60 50">
                 <g fill="currentColor">
-                    <path class="ala" d="M0 0 C-10 -26 -34 -24 -28 -6 C-26 4 -12 6 0 0Z"/>
-                    <path class="ala" d="M0 0 C-8 20 -24 26 -20 12 C-18 6 -8 2 0 0Z" opacity=".85"/>
-                    <path class="ala" d="M0 0 C10 -26 34 -24 28 -6 C26 4 12 6 0 0Z"/>
-                    <path class="ala" d="M0 0 C8 20 24 26 20 12 C18 6 8 2 0 0Z" opacity=".85"/>
+                    <path d="M0 0 C-10 -26 -34 -24 -28 -6 C-26 4 -12 6 0 0Z"/>
+                    <path d="M0 0 C-8 20 -24 26 -20 12 C-18 6 -8 2 0 0Z" opacity=".85"/>
+                    <path d="M0 0 C10 -26 34 -24 28 -6 C26 4 12 6 0 0Z"/>
+                    <path d="M0 0 C8 20 24 26 20 12 C18 6 8 2 0 0Z" opacity=".85"/>
                 </g>
                 <ellipse cx="0" cy="0" rx="1.8" ry="9" fill="#5b4a46"/>
             </symbol>
 
             <!-- Arreglo floral de esquina (se voltea con CSS para las 4 esquinas) -->
             <symbol id="esquina" viewBox="0 0 200 200">
-                <!-- tallos -->
                 <path d="M0 158 C38 150 66 126 82 88 C94 60 118 36 168 26" fill="none" stroke="#8fa57d" stroke-width="2.4" stroke-linecap="round"/>
                 <path d="M30 0 C42 38 74 62 118 66" fill="none" stroke="#8fa57d" stroke-width="2" stroke-linecap="round"/>
                 <path d="M0 112 C26 118 44 136 52 168" fill="none" stroke="#a9bc97" stroke-width="1.8" stroke-linecap="round"/>
 
-                <!-- hojas (detrás) -->
                 <use href="#hoja" x="96" y="-6" width="30" height="56" transform="rotate(62 111 22)"/>
                 <use href="#hoja" x="140" y="36" width="30" height="56" transform="rotate(112 155 64)"/>
                 <use href="#hoja" x="72" y="48" width="30" height="56" transform="rotate(18 87 76)"/>
@@ -116,18 +109,15 @@
                 <use href="#hoja" x="60" y="88" width="28" height="52" transform="rotate(-52 74 114)"/>
                 <use href="#hoja" x="150" y="2" width="26" height="48" transform="rotate(84 163 26)"/>
 
-                <!-- flores grandes -->
                 <use href="#rosa" x="-6" y="-6" width="96" height="96" style="color:#e9a3b8"/>
                 <use href="#rosa" x="92" y="2" width="62" height="62" style="color:#ebcb70"/>
                 <use href="#margarita" x="2" y="92" width="64" height="64"/>
                 <use href="#rosa" x="70" y="76" width="44" height="44" style="color:#d96f8f"/>
                 <use href="#margarita" x="132" y="58" width="40" height="40"/>
 
-                <!-- capullos -->
                 <use href="#capullo" x="124" y="12" width="14" height="21" transform="rotate(20 131 22)" style="color:#e9a3b8"/>
                 <use href="#capullo" x="40" y="164" width="14" height="21" transform="rotate(-30 47 174)" style="color:#ebcb70"/>
 
-                <!-- nomeolvides -->
                 <use href="#nomeolvides" x="108" y="90" width="24" height="24"/>
                 <use href="#nomeolvides" x="124" y="104" width="20" height="20"/>
                 <use href="#nomeolvides" x="170" y="40" width="22" height="22"/>
@@ -137,38 +127,44 @@
                 <use href="#nomeolvides" x="2" y="170" width="20" height="20"/>
             </symbol>
 
-            <!-- Ramita lateral (para los bordes) -->
-            <symbol id="rama" viewBox="0 0 80 220">
-                <path d="M0 6 C34 40 30 90 14 130 C4 156 6 190 0 214" fill="none" stroke="#8fa57d" stroke-width="2" stroke-linecap="round"/>
-                <use href="#hoja" x="14" y="20" width="22" height="42" transform="rotate(-62 25 41)"/>
-                <use href="#hoja" x="22" y="78" width="22" height="42" transform="rotate(-84 33 99)"/>
-                <use href="#hoja" x="8" y="136" width="22" height="42" transform="rotate(-54 19 157)"/>
-                <use href="#margarita" x="12" y="52" width="34" height="34"/>
-                <use href="#rosa" x="-8" y="108" width="40" height="40" style="color:#e9a3b8"/>
-                <use href="#nomeolvides" x="34" y="116" width="18" height="18"/>
-                <use href="#nomeolvides" x="30" y="30" width="16" height="16"/>
-                <use href="#nomeolvides" x="16" y="172" width="18" height="18"/>
-                <use href="#rosa" x="-6" y="178" width="30" height="30" style="color:#ebcb70"/>
-            </symbol>
-
         </defs>
     </svg>
 
+    <!-- Pétalos que caen suavemente (se dibujan con JavaScript) -->
+    <canvas id="petalos" aria-hidden="true"></canvas>
+
+    <!-- Barra de avance al desplazarse -->
+    <div id="progreso" class="progreso" aria-hidden="true"></div>
+
     <!-- ============================================================
-         PORTADA (al tocar el botón se abre la invitación y suena la música)
+         PORTADA: cortinas que se abren sobre la ilustración
          ============================================================ -->
     <div id="portada" class="portada" role="dialog" aria-label="Portada de la invitación">
 
-        <svg class="esquina tl" viewBox="0 0 200 200" aria-hidden="true"><use href="#esquina"/></svg>
-        <svg class="esquina tr" viewBox="0 0 200 200" aria-hidden="true"><use href="#esquina"/></svg>
-        <svg class="esquina bl" viewBox="0 0 200 200" aria-hidden="true"><use href="#esquina"/></svg>
-        <svg class="esquina br" viewBox="0 0 200 200" aria-hidden="true"><use href="#esquina"/></svg>
+        <div class="escena">
 
-        <div class="portada-texto">
-            <p class="subtitulo">Mis XV años</p>
-            <h1 class="portada-nombre">Erika Darlen</h1>
-            <div class="separador"><span>✿</span></div>
-            <button type="button" id="btn-abrir" class="btn-abrir">Abrir invitación</button>
+            <img class="escena-foto" src="quinceanera.jpg"
+                 alt="Ilustración de la quinceañera de espaldas, con vestido fucsia, frente a un ventanal rodeado de rosas">
+            <div class="escena-velo"></div>
+
+            <span class="brillo" style="top:66%;left:30%;--r:.2s"></span>
+            <span class="brillo" style="top:58%;left:62%;--r:1.1s"></span>
+            <span class="brillo" style="top:80%;left:74%;--r:.7s"></span>
+            <span class="brillo" style="top:88%;left:22%;--r:1.6s"></span>
+            <span class="brillo" style="top:18%;left:40%;--r:.4s"></span>
+
+            <div class="cortina cortina-izq"></div>
+            <div class="cortina cortina-der"></div>
+
+            <div class="portada-texto">
+                <p class="subtitulo">Mis XV años</p>
+                <h1 class="portada-nombre">Erika Darlen</h1>
+                <div class="separador">
+                    <span class="linea"></span><span class="flor">✿</span><span class="linea"></span>
+                </div>
+                <button type="button" id="btn-abrir" class="btn-abrir">Abrir invitación</button>
+            </div>
+
         </div>
 
     </div>
@@ -185,7 +181,7 @@
         </svg>
     </button>
 
-    <!-- Canción: coloca el archivo "dreaming-of-you.mp3" junto a index.html -->
+    <!-- Canción -->
     <audio id="musica" loop preload="auto">
         <source src="WhatsApp Audio 2026-11-16 at 12.26.39 PM.mpeg" type="audio/mpeg">
     </audio>
@@ -203,11 +199,6 @@
             <svg class="esquina bl" viewBox="0 0 200 200" aria-hidden="true"><use href="#esquina"/></svg>
             <svg class="esquina br" viewBox="0 0 200 200" aria-hidden="true"><use href="#esquina"/></svg>
 
-            <svg class="rama izq-1" viewBox="0 0 80 220" aria-hidden="true"><use href="#rama"/></svg>
-            <svg class="rama der-1" viewBox="0 0 80 220" aria-hidden="true"><use href="#rama"/></svg>
-            <svg class="rama izq-2" viewBox="0 0 80 220" aria-hidden="true"><use href="#rama"/></svg>
-            <svg class="rama der-2" viewBox="0 0 80 220" aria-hidden="true"><use href="#rama"/></svg>
-
             <!-- Mariposas -->
             <svg class="mariposa m1" viewBox="-30 -25 60 50" aria-hidden="true" style="color:#7fb3e3"><use href="#mariposa"/></svg>
             <svg class="mariposa m2" viewBox="-30 -25 60 50" aria-hidden="true" style="color:#f0a9c0"><use href="#mariposa"/></svg>
@@ -217,50 +208,73 @@
 
                 <!-- PRESENTACIÓN -->
 
+                <figure class="arco">
+                    <div class="arco-marco">
+                        <img class="arco-foto" src="quinceanera.jpg"
+                             alt="Ilustración de la quinceañera de espaldas, con vestido fucsia, frente a un ventanal rodeado de rosas">
+                        <span class="brillo" style="top:66%;left:30%;--r:.2s"></span>
+                        <span class="brillo" style="top:58%;left:64%;--r:1.1s"></span>
+                        <span class="brillo" style="top:80%;left:74%;--r:.7s"></span>
+                        <span class="brillo" style="top:88%;left:22%;--r:1.6s"></span>
+                        <span class="brillo" style="top:72%;left:48%;--r:2.2s"></span>
+                        <span class="brillo" style="top:16%;left:42%;--r:.4s"></span>
+                        <span class="brillo" style="top:12%;left:60%;--r:1.4s"></span>
+                    </div>
+                </figure>
+
                 <p class="subtitulo reveal">Mis XV años</p>
-                <p class="subtitulo nombre reveal" style="--d:.15s">Erika Darlen</p>
+                <p class="subtitulo nombre reveal escribir" style="--d:.15s"><span>Erika Darlen</span></p>
 
                 <div class="separador reveal zoom" style="--d:.3s">
-                    <span>✿</span>
+                    <span class="linea"></span><span class="flor">✿</span><span class="linea"></span>
                 </div>
 
-                <h1 class="reveal" style="--d:.4s">Estás invitado</h1>
+                <h1 class="reveal escribir" style="--d:.4s"><span>Estás invitado</span></h1>
 
-                <p class="descripcion reveal" style="--d:.55s">
-                    Junto a mis padres,<br>
-                    <strong>Erick Ramírez Castillo</strong> <br> e <br>
-                    <strong>Iride Solórzano Rubio</strong><br>mis padrinos <br>
-                    <strong>J.Jesús Solórzano Rubio</strong> <br> e <br>
-                    <strong>Yanet Pérez Martínez</strong><br>
-                    los espero para compartir una noche
-                    mágica e inolvidable.
-                </p>
+                <div class="descripcion">
+                    <p class="frase reveal">Junto a mis padres,</p>
+                    <p class="nombres reveal" style="--d:.1s">
+                        <strong>Erick Ramírez Castillo</strong>
+                        <span class="conector">e</span>
+                        <strong>Iride Solórzano Rubio</strong>
+                    </p>
+                    <p class="frase reveal">mis padrinos</p>
+                    <p class="nombres reveal" style="--d:.1s">
+                        <strong>J.Jesús Solórzano Rubio</strong>
+                        <span class="conector">e</span>
+                        <strong>Yanet Pérez Martínez</strong>
+                    </p>
+                    <p class="frase reveal">
+                        los espero para compartir una noche
+                        mágica e inolvidable.
+                    </p>
+                </div>
 
                 <!-- FECHA DEL EVENTO -->
 
                 <div class="detalle-evento">
 
-                    <div class="evento-horario reveal">
+                    <article class="evento-horario reveal">
 
-                        <p class="fecha">Misa </p>
-                        <p class="fecha">Este 21 de Diciembre </p><br>
-                        <p class="fecha">A las 4:00 de la tarde </p><br>
+                        <p class="fecha">Misa</p>
+                        <p class="fecha">Este 21 de Diciembre</p>
+                        <p class="fecha">A las 4:00 de la tarde</p>
+
                         <div id="contador-misa" class="contador-sitio"></div>
 
-                    </div>
+                    </article>
 
-                    <div class="evento-horario reveal">
+                    <div class="hilo reveal" aria-hidden="true"><span>✿</span></div>
+
+                    <article class="evento-horario reveal">
 
                         <p class="fecha">Recepción</p>
-                         <p class="fecha">A las 5 de la tarde </p><br>
-    
-                            <br>
-                            Salón Bugambilias
-                        </p>
+                        <p class="fecha">A las 5 de la tarde</p>
+                        <p class="lugar-evento">Salón Bugambilias</p>
 
                         <div id="contador-recepcion" class="contador-sitio"></div>
 
-                    </div>
+                    </article>
 
                 </div>
 
@@ -269,7 +283,7 @@
                 <section class="ubicaciones">
 
                     <div class="separador reveal zoom">
-                        <span>❀</span>
+                        <span class="linea"></span><span class="flor">❀</span><span class="linea"></span>
                     </div>
 
                     <h2 class="reveal">¿Dónde nos vemos?</h2>
@@ -356,7 +370,7 @@
                 <section class="dress-code">
 
                     <div class="separador reveal zoom">
-                        <span>✿</span>
+                        <span class="linea"></span><span class="flor">✿</span><span class="linea"></span>
                     </div>
 
                     <h2 class="reveal">Dress Code</h2>
@@ -377,7 +391,7 @@
                 <section class="sobres">
 
                     <div class="separador reveal zoom">
-                        <span>❀</span>
+                        <span class="linea"></span><span class="flor">❀</span><span class="linea"></span>
                     </div>
 
                     <h2 class="reveal">Lluvia de sobres</h2>
@@ -397,7 +411,7 @@
                 <section class="confirmacion">
 
                     <div class="separador reveal zoom">
-                        <span>✿</span>
+                        <span class="linea"></span><span class="flor">✿</span><span class="linea"></span>
                     </div>
                     <p class="mensaje-final reveal">
                         ¡Te esperamos!
@@ -407,12 +421,16 @@
 
                 <!-- FIRMA -->
 
-                <div class="separador reveal zoom">
-                    <span>❀</span>
-                </div>
+                <div class="cierre">
 
-                <p class="firma reveal">Con cariño</p>
-                <p class="firma nombre-firma reveal" style="--d:.15s">Erika Darlen</p>
+                    <div class="separador reveal zoom">
+                        <span class="linea"></span><span class="flor">❀</span><span class="linea"></span>
+                    </div>
+
+                    <p class="firma reveal">Con cariño</p>
+                    <p class="firma nombre-firma reveal escribir" style="--d:.15s"><span>Erika Darlen</span></p>
+
+                </div>
 
             </section>
 
