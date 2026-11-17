@@ -1,4 +1,25 @@
-/* CONFIGURACIÓN GENERAL */
+/* ============================================================
+   VARIABLES
+   ============================================================ */
+
+:root {
+    --vino:   #85645e;
+    --arena:  #a9857d;
+    --rosa:   #c89c94;
+    --texto:  #66534f;
+    --fucsia: #b5336f;
+    --linea:  rgba(185, 151, 134, .45);
+
+    --fuente-texto: "Cormorant Garamond", Georgia, serif;
+    --fuente-firma: "Great Vibes", cursive;
+
+    --suave: cubic-bezier(.2, .7, .2, 1);
+}
+
+
+/* ============================================================
+   CONFIGURACIÓN GENERAL
+   ============================================================ */
 
 * {
     margin: 0;
@@ -32,103 +53,28 @@ body {
     background-color: #EDE3D6;
 
     background-image:
-        linear-gradient(
-            118deg,
-            transparent 15%,
-            rgba(190,166,143,.13) 16%,
-            rgba(255,255,255,.65) 17%,
-            transparent 19%
-        ),
-        linear-gradient(
-            35deg,
-            transparent 55%,
-            rgba(202,181,158,.17) 57%,
-            rgba(255,255,255,.8) 58%,
-            transparent 60%
-        ),
-        radial-gradient(
-            ellipse at 15% 25%,
-            rgba(255,255,255,.95),
-            transparent 45%
-        ),
-        radial-gradient(
-            ellipse at 85% 75%,
-            rgba(208,188,165,.25),
-            transparent 50%
-        ),
-        radial-gradient(
-            ellipse at 65% 15%,
-            rgba(255,255,255,.8),
-            transparent 40%
-        ),
-        linear-gradient(
-            135deg,
-            #F6EFE6,
-            #EDE3D6,
-            #F9F5EF,
-            #E9DED1
-        );
+        linear-gradient(118deg, transparent 15%, rgba(190,166,143,.13) 16%, rgba(255,255,255,.65) 17%, transparent 19%),
+        linear-gradient(35deg, transparent 55%, rgba(202,181,158,.17) 57%, rgba(255,255,255,.8) 58%, transparent 60%),
+        radial-gradient(ellipse at 15% 25%, rgba(255,255,255,.95), transparent 45%),
+        radial-gradient(ellipse at 85% 75%, rgba(208,188,165,.25), transparent 50%),
+        radial-gradient(ellipse at 65% 15%, rgba(255,255,255,.8), transparent 40%),
+        linear-gradient(135deg, #F6EFE6, #EDE3D6, #F9F5EF, #E9DED1);
 
-    font-family: "Cormorant Garamond", Georgia, serif;
-    color: #66534f;
+    font-family: var(--fuente-texto);
     font-size: 18px;
+    color: var(--texto);
 }
 
 
-/* TIPOGRAFÍA ROMÁNTICA PARA XV AÑOS */
-.nombre,
-.portada-nombre,
-.nombre-firma,
-.firma,
-h1,
-.mensaje-final {
-    font-family: "Great Vibes", cursive;
-    font-weight: normal;
-}
-
-.nombre {
-    font-size: clamp(34px, 8vw, 46px);
-    letter-spacing: .5px;
-    line-height: 1.2;
-}
-
-.portada-nombre {
-    font-size: clamp(48px, 12vw, 72px);
-    line-height: 1.15;
-}
-
-.nombre-firma {
-    font-size: 36px;
-}
-
-h1 {
-    font-size: clamp(42px, 10vw, 58px);
-    line-height: 1.15;
-}
-
-.mensaje-final {
-    font-size: 34px;
-}
-
-.ubicaciones h2,
-.dress-code h2,
-.sobres h2,
-.confirmacion h2 {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-weight: 600;
-    font-style: italic;
-    letter-spacing: .4px;
-}
-
-/* CONTENEDOR PRINCIPAL */
+/* ============================================================
+   CONTENEDORES
+   ============================================================ */
 
 .invitacion {
     width: 100%;
     max-width: 480px;
 
     min-height: 90dvh;
-    height: auto;
-
     margin: 0 auto;
 
     display: flex;
@@ -136,12 +82,7 @@ h1 {
 
     padding: 12px;
 
-    background: linear-gradient(
-        145deg,
-        #FFFDF9,
-        #F5EDE3,
-        #FFFDF9
-    );
+    background: linear-gradient(145deg, #FFFDF9, #F5EDE3, #FFFDF9);
 
     border: 1px solid rgba(189,158,144,.4);
 
@@ -151,13 +92,9 @@ h1 {
         inset 0 0 15px rgba(255,255,255,.8);
 }
 
-/* MARCO INTERIOR */
-
 .marco-floral {
     width: 100%;
-
     min-height: 90dvh;
-    height: auto;
 
     position: relative;
 
@@ -172,91 +109,41 @@ h1 {
     background-color: #FAF6F0;
 
     background-image:
-        linear-gradient(
-            125deg,
-            transparent 12%,
-            rgba(205,183,159,.12) 13%,
-            rgba(255,255,255,.75) 14%,
-            transparent 16%
-        ),
-        linear-gradient(
-            45deg,
-            transparent 65%,
-            rgba(218,198,174,.17) 67%,
-            rgba(255,255,255,.85) 68%,
-            transparent 70%
-        ),
-        radial-gradient(
-            ellipse at 25% 20%,
-            rgba(255,255,255,.98),
-            transparent 55%
-        ),
-        radial-gradient(
-            ellipse at 80% 75%,
-            rgba(220,201,179,.25),
-            transparent 50%
-        ),
-        radial-gradient(
-            ellipse at 15% 85%,
-            rgba(230,216,199,.22),
-            transparent 45%
-        ),
-        radial-gradient(
-            ellipse at 90% 15%,
-            rgba(255,255,255,.9),
-            transparent 45%
-        ),
-        linear-gradient(
-            135deg,
-            #FAF6F0,
-            #F1E8DC,
-            #FFFDF9,
-            #F4EDE3
-        );
+        linear-gradient(125deg, transparent 12%, rgba(205,183,159,.12) 13%, rgba(255,255,255,.75) 14%, transparent 16%),
+        linear-gradient(45deg, transparent 65%, rgba(218,198,174,.17) 67%, rgba(255,255,255,.85) 68%, transparent 70%),
+        radial-gradient(ellipse at 25% 20%, rgba(255,255,255,.98), transparent 55%),
+        radial-gradient(ellipse at 80% 75%, rgba(220,201,179,.25), transparent 50%),
+        radial-gradient(ellipse at 15% 85%, rgba(230,216,199,.22), transparent 45%),
+        radial-gradient(ellipse at 90% 15%, rgba(255,255,255,.9), transparent 45%),
+        linear-gradient(135deg, #FAF6F0, #F1E8DC, #FFFDF9, #F4EDE3);
 
     box-shadow:
         inset 0 0 25px rgba(190,165,140,.12),
         inset 0 0 8px rgba(255,255,255,.9);
 }
 
-/* SOMBRAS DEL MARCO */
+/* sombras suaves arriba y abajo del marco */
 
 .marco-floral::before,
 .marco-floral::after {
     content: "";
-
     position: absolute;
-
     left: 0;
-
     width: 100%;
     height: 150px;
-
     pointer-events: none;
     z-index: 0;
 }
 
 .marco-floral::before {
     top: 0;
-
-    background: linear-gradient(
-        to bottom,
-        rgba(216,196,174,.13),
-        transparent
-    );
+    background: linear-gradient(to bottom, rgba(216,196,174,.13), transparent);
 }
 
 .marco-floral::after {
     bottom: 0;
-
-    background: linear-gradient(
-        to top,
-        rgba(216,196,174,.13),
-        transparent
-    );
+    background: linear-gradient(to top, rgba(216,196,174,.13), transparent);
 }
-
-/* CONTENIDO GENERAL */
 
 .contenido {
     position: relative;
@@ -264,8 +151,8 @@ h1 {
 
     width: 100%;
 
-    /* espacio arriba y abajo para los arreglos florales de las esquinas */
-    padding: 105px 25px;
+    /* espacio para que las flores de las esquinas no tapen el texto */
+    padding: 64px 25px 100px;
 
     text-align: center;
 
@@ -274,108 +161,323 @@ h1 {
     justify-content: flex-start;
 }
 
-/* SUBTÍTULOS */
+
+/* ============================================================
+   TIPOGRAFÍA
+   ============================================================ */
 
 .subtitulo {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: var(--fuente-texto);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: none;
 
-    font-size: 10px;
-    letter-spacing: 2px;
+    color: var(--arena);
+}
 
-    color: #a9857d;
-
-    margin-bottom: 8px;
+.nombre,
+.portada-nombre,
+.nombre-firma,
+.mensaje-final,
+h1 {
+    font-family: var(--fuente-firma);
+    font-weight: normal;
+    font-style: normal;
 }
 
 .nombre {
-    margin-top: 5px;
+    margin-top: 2px;
+    font-size: clamp(40px, 10vw, 54px);
+    line-height: 1.2;
+    letter-spacing: .5px;
+    color: var(--vino);
 }
-
-/* TÍTULO */
 
 h1 {
-    margin: 25px 0;
+    margin: 4px 0 26px;
+    font-size: clamp(40px, 10vw, 54px);
+    line-height: 1.15;
+    color: var(--vino);
+}
 
-    font-size: clamp(32px, 9vw, 45px);
+h2 {
+    margin: 22px 0 20px;
 
-    font-weight: normal;
+    font-family: var(--fuente-texto);
+    font-size: 30px;
+    font-weight: 600;
     font-style: italic;
+    letter-spacing: .4px;
+    line-height: 1.2;
 
-    color: #85645e;
+    color: var(--vino);
 }
 
-/* DESCRIPCIÓN */
 
-.descripcion {
-    max-width: 300px;
-
-    margin: 0 auto;
-
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-.descripcion strong {
-    color: #85645e;
-}
-
-/* SEPARADORES */
+/* ============================================================
+   SEPARADORES (línea · flor · línea)
+   ============================================================ */
 
 .separador {
-    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
 
-    color: #c89c94;
+    margin: 22px 0;
 
-    font-size: 25px;
+    color: var(--rosa);
+    font-size: 24px;
+    line-height: 1;
 }
 
-.separador span {
+.separador .flor {
     display: inline-block;
 }
 
-/* DETALLES DEL EVENTO */
-
-.detalle-evento {
-    margin: 30px 0;
+.separador .linea {
+    flex: 0 1 84px;
+    height: 1px;
 }
 
-.fecha {
-    font-family: "Cormorant Garamond", Georgia, serif;
+.separador .linea:first-child {
+    background: linear-gradient(90deg, transparent, var(--rosa));
+    transform-origin: right center;
+}
 
-    font-size: 12px;
-    letter-spacing: 1.5px;
+.separador .linea:last-child {
+    background: linear-gradient(270deg, transparent, var(--rosa));
+    transform-origin: left center;
+}
 
-    color: #a9857d;
 
-    margin: 15px 0;
+/* ============================================================
+   ARCO CON LA ILUSTRACIÓN
+   ============================================================ */
+
+.arco {
+    width: min(100%, 280px);
+    margin: 0 auto 36px;
+}
+
+.arco-marco {
+    position: relative;
+
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+
+    border-radius: 999px 999px 14px 14px;
+
+    background: #f3e9df;
+
+    box-shadow:
+        0 0 0 6px rgba(255,253,249,.95),
+        0 0 0 7px var(--linea),
+        0 20px 44px rgba(112,83,72,.24);
+}
+
+.arco-foto {
+    position: absolute;
+    left: 0;
+    top: -6%;
+
+    width: 100%;
+    height: 112%;
+
+    object-fit: cover;
+    object-position: 50% 40%;
+
+    /* --py lo mueve JavaScript al desplazarse (efecto parallax) */
+    transform: translateY(var(--py, 0px));
+    will-change: transform;
+}
+
+body.abierta .arco-foto {
+    animation: kenburns 20s ease-in-out infinite alternate;
+}
+
+/* Brillos que centellean sobre el vestido */
+
+.brillo {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.brillo::before,
+.brillo::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    background: #fff;
+    border-radius: 2px;
+
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 7px 1px rgba(255,255,255,.95);
+}
+
+.brillo::before { width: 2px;  height: 12px; }
+.brillo::after  { width: 12px; height: 2px; }
+
+.abriendo .brillo,
+body.abierta .brillo {
+    animation: centelleo 3.4s ease-in-out var(--r, 0s) infinite;
+}
+
+
+/* ============================================================
+   PRESENTACIÓN
+   ============================================================ */
+
+.descripcion {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.descripcion .frase {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.descripcion .nombres {
+    margin: 8px 0 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.descripcion strong {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+
+    color: var(--vino);
+}
+
+.descripcion .conector {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--arena);
+}
+
+
+/* ============================================================
+   EVENTOS (misa y recepción)
+   ============================================================ */
+
+.detalle-evento {
+    margin: 44px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .evento-horario {
-    margin: 25px 0;
+    width: 100%;
+    max-width: 330px;
+
+    padding: 24px 18px 22px;
+
+    border: 1px solid var(--linea);
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.55);
+
+    box-shadow:
+        0 8px 24px rgba(112,83,72,.08),
+        inset 0 0 12px rgba(255,255,255,.8);
+}
+
+.fecha {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+
+    color: var(--arena);
+}
+
+/* el primer renglón de cada tarjeta es el título */
+
+.evento-horario .fecha:first-child {
+    margin-bottom: 8px;
+
+    font-size: 32px;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: .5px;
+    line-height: 1.2;
+
+    color: var(--vino);
 }
 
 .lugar-evento {
-    font-size: 14px;
-    line-height: 1.7;
+    margin-top: 2px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    color: var(--texto);
 }
 
-/* CONTADOR COMPACTO (una sola línea, en forma de píldora) */
+/* hilo que une misa y recepción */
+
+.hilo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 58px;
+    color: var(--rosa);
+    font-size: 16px;
+}
+
+.hilo::before,
+.hilo::after {
+    content: "";
+    flex: 1;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--rosa));
+}
+
+.hilo::after {
+    background: linear-gradient(to top, transparent, var(--rosa));
+}
+
+.hilo span {
+    padding: 3px 0;
+}
+
+
+/* ============================================================
+   CONTADOR COMPACTO (una sola línea, en forma de píldora)
+   ============================================================ */
 
 .contador-sitio {
-    margin-top: 12px;
-    min-height: 46px;
+    margin-top: 16px;
+    min-height: 52px;
 }
 
 .cuenta {
     display: inline-flex;
     align-items: stretch;
 
-    padding: 7px 4px;
+    padding: 8px 4px;
 
-    border: 1px solid rgba(185,151,134,.45);
+    border: 1px solid var(--linea);
     border-radius: 999px;
 
-    background: rgba(255,255,255,.6);
+    background: rgba(255,255,255,.7);
 
     box-shadow:
         0 2px 8px rgba(112,83,72,.08),
@@ -383,8 +485,8 @@ h1 {
 }
 
 .cuenta .u {
-    min-width: 46px;
-    padding: 0 10px;
+    min-width: 52px;
+    padding: 0 11px;
 
     display: flex;
     flex-direction: column;
@@ -398,63 +500,53 @@ h1 {
 }
 
 .cuenta b {
-    font-weight: normal;
-    font-style: italic;
-    font-size: 20px;
+    display: inline-block;
 
-    color: #85645e;
+    font-size: 26px;
+    font-weight: 600;
+    font-style: italic;
+
+    color: var(--vino);
 
     font-variant-numeric: tabular-nums;
 }
 
-.cuenta small {
-    margin-top: 4px;
+/* los números "ruedan" cuando cambian */
+.cuenta b.cambio {
+    animation: rodar .45s var(--suave);
+}
 
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 8px;
+.cuenta small {
+    margin-top: 5px;
+
+    font-size: 11px;
+    font-weight: 600;
     letter-spacing: 1.5px;
 
-    color: #a9857d;
+    color: var(--arena);
 }
 
 .cuenta-fin {
-    font-size: 17px;
+    font-size: 22px;
     font-style: italic;
 
-    color: #85645e;
+    color: var(--vino);
 }
 
-/* UBICACIONES */
+
+/* ============================================================
+   UBICACIONES
+   ============================================================ */
 
 .ubicaciones {
     width: 100%;
-
-    margin: 25px 0;
-
-    position: relative;
-    z-index: 2;
-}
-
-.ubicaciones h2,
-.dress-code h2,
-.sobres h2,
-.confirmacion h2 {
-    font-size: 22px;
-
-    font-weight: normal;
-    font-style: italic;
-
-    color: #85645e;
-
-    margin-bottom: 25px;
+    margin-top: 52px;
 }
 
 .ubicaciones-contenedor {
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 15px;
+    gap: 16px;
 }
 
 .ubicacion {
@@ -463,21 +555,21 @@ h1 {
 }
 
 .ubicacion h3 {
-    font-family: "Cormorant Garamond", Georgia, serif;
-
-    font-size: 12px;
-    letter-spacing: 2px;
-
-    color: #a9857d;
-
     margin-bottom: 12px;
-}
 
-/* FOTOGRAFÍAS */
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: var(--arena);
+}
 
 .imagen-lugar {
     display: block;
     width: 100%;
+
+    overflow: hidden;
+    border-radius: 6px;
 }
 
 .ubicacion img {
@@ -488,89 +580,98 @@ h1 {
 
     object-fit: cover;
 
-    border-radius: 5px;
-
     border: 1px solid rgba(185,151,134,.5);
+    border-radius: 6px;
+
+    transition: transform .8s var(--suave);
+}
+
+.imagen-lugar:hover img {
+    transform: scale(1.06);
 }
 
 .ubicacion p {
-    font-size: 12px;
-    line-height: 1.5;
+    margin: 12px 0 6px;
 
-    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
 
-    color: #66534f;
+    color: var(--texto);
 }
-
-/* ENLACES DE MAPS */
 
 .link-mapa {
     display: inline-block;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
 
-    font-size: 11px;
-
-    color: #a9857d;
+    color: var(--arena);
 
     text-decoration: underline;
-
-    margin-top: 5px;
+    text-underline-offset: 3px;
 }
 
-/* DRESS CODE */
+
+/* ============================================================
+   DRESS CODE · SOBRES · CONFIRMACIÓN · FIRMA
+   ============================================================ */
 
 .dress-code,
 .sobres,
 .confirmacion {
-    margin: 30px 0;
+    margin-top: 52px;
 }
 
 .texto-seccion {
-    font-size: 15px;
-    line-height: 1.8;
-
     max-width: 310px;
-
     margin: 0 auto;
+
+    font-size: 19px;
+    line-height: 1.7;
 }
 
 .nota {
-    margin-top: 15px;
+    max-width: 300px;
+    margin: 14px auto 0;
 
-    font-size: 13px;
+    font-size: 17px;
     font-style: italic;
+    line-height: 1.6;
 
-    line-height: 1.7;
-
-    color: #a9857d;
+    color: var(--arena);
 }
-
-/* MENSAJE FINAL */
 
 .mensaje-final {
-    margin-top: 25px;
+    margin-top: 6px;
 
-    font-size: 20px;
-    font-style: italic;
+    font-size: 44px;
+    line-height: 1.2;
 
-    color: #85645e;
+    color: var(--vino);
 }
 
-/* FIRMA */
+.cierre {
+    margin-top: 40px;
+}
 
 .firma {
     margin-top: 10px;
 
+    font-size: 22px;
     font-style: italic;
-    font-size: 19px;
 
-    color: #a9857d;
+    color: var(--arena);
 }
 
 .nombre-firma {
-    margin-top: 8px;
-    font-size: 22px;
+    margin-top: 2px;
+
+    font-size: 46px;
+    font-style: normal;
+    line-height: 1.2;
+
+    color: var(--vino);
 }
 
 
@@ -579,7 +680,6 @@ h1 {
    ============================================================ */
 
 .esquina,
-.rama,
 .mariposa {
     position: absolute;
     pointer-events: none;
@@ -588,6 +688,7 @@ h1 {
 
 .esquina {
     z-index: 1;
+    width: clamp(110px, 32%, 170px);
 
     /* --fx / --fy voltean el mismo dibujo para usarlo en las 4 esquinas */
     transform: scale(var(--fx, 1), var(--fy, 1));
@@ -599,40 +700,18 @@ h1 {
 .esquina.bl { bottom: 0; left: 0;  --fy: -1; --ret: .3s; }
 .esquina.br { bottom: 0; right: 0; --fx: -1; --fy: -1; --ret: .45s; }
 
-.marco-floral .esquina {
-    width: clamp(120px, 38%, 200px);
-}
-
-/* Ramitas laterales */
-
-.rama {
-    z-index: 1;
-    width: 38px;
-    opacity: .9;
-
-    transform: scaleX(var(--fx, 1));
-    transform-origin: top center;
-}
-
-.rama.izq-1 { left: -4px;  top: 24%; }
-.rama.der-1 { right: -4px; top: 31%; --fx: -1; --ret: .2s; }
-.rama.izq-2 { left: -4px;  top: 58%; --ret: .1s; }
-.rama.der-2 { right: -4px; top: 66%; --fx: -1; --ret: .3s; }
-
-/* Mariposas */
-
 .mariposa {
     z-index: 1;
-    width: 26px;
+    width: 24px;
 }
 
-.mariposa.m1 { top: 17%; left: 13%; }
-.mariposa.m2 { top: 47%; right: 9%; width: 22px; }
-.mariposa.m3 { top: 76%; left: 11%; width: 24px; }
+.mariposa.m1 { top: 30%; left: 9%; }
+.mariposa.m2 { top: 52%; right: 8%; width: 20px; }
+.mariposa.m3 { top: 78%; left: 10%; width: 22px; }
 
 
 /* ============================================================
-   PORTADA
+   PORTADA CON CORTINAS
    ============================================================ */
 
 .portada {
@@ -642,65 +721,143 @@ h1 {
 
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    overflow: hidden;
 
     background:
         radial-gradient(ellipse at 20% 20%, rgba(255,255,255,.95), transparent 50%),
         radial-gradient(ellipse at 80% 80%, rgba(208,188,165,.25), transparent 55%),
         linear-gradient(135deg, #F6EFE6, #EDE3D6, #F9F5EF, #E9DED1);
 
-    transition: opacity 1.2s ease, visibility 0s linear 1.2s;
+    transition: opacity 1.4s ease, visibility 0s linear 1.4s;
 }
 
-.portada .esquina {
-    width: clamp(150px, 34vw, 300px);
-    transition: scale 1.4s ease;
+.escena {
+    position: relative;
+
+    width: min(100%, 520px);
+    height: 100%;
+
+    overflow: hidden;
 }
+
+.escena-foto {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 50% 28%;
+
+    transform: scale(1.04);
+    transition: transform 4s cubic-bezier(.2, .6, .2, 1);
+}
+
+.abriendo .escena-foto {
+    transform: scale(1.16);
+}
+
+.escena-velo {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255,250,245,.25),
+        transparent 30%,
+        transparent 62%,
+        rgba(70,20,45,.3)
+    );
+}
+
+/* Cortinas: velo translúcido con pliegues que se abre hacia los lados */
+
+.cortina {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+
+    width: 51%;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,251,247,.9) 0,
+            rgba(236,224,212,.82) 18px,
+            rgba(255,251,247,.92) 38px,
+            rgba(244,235,226,.86) 54px,
+            rgba(255,251,247,.9) 72px
+        );
+
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+
+    transition: transform 2s cubic-bezier(.65, 0, .25, 1);
+}
+
+.cortina-izq {
+    left: 0;
+    box-shadow: 8px 0 22px rgba(112,83,72,.18);
+}
+
+.cortina-der {
+    right: 0;
+    box-shadow: -8px 0 22px rgba(112,83,72,.18);
+}
+
+.abriendo .cortina-izq { transform: translateX(-104%); }
+.abriendo .cortina-der { transform: translateX(104%); }
 
 .portada-texto {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     padding: 0 24px;
 
     text-align: center;
+
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.abriendo .portada-texto {
+    opacity: 0;
+    transform: translateY(-16px);
+    pointer-events: none;
 }
 
 .portada-nombre {
-    margin: 14px 0 6px;
-    font-size: clamp(38px, 11vw, 60px);
-}
-
-.portada-nota {
-    margin-top: 16px;
-
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-
-    color: #a9857d;
+    margin: 10px 0 6px;
+    font-size: clamp(54px, 15vw, 78px);
+    line-height: 1.1;
+    color: var(--vino);
 }
 
 .btn-abrir {
-    margin-top: 10px;
-    padding: 12px 34px;
+    margin-top: 12px;
+    padding: 13px 36px;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 18px;
+    font-family: var(--fuente-texto);
+    font-size: 20px;
+    font-weight: 600;
     font-style: italic;
 
-    color: #85645e;
+    color: var(--vino);
 
-    background: rgba(255,255,255,.7);
+    background: rgba(255,255,255,.8);
 
     border: 1px solid #b99786;
     border-radius: 999px;
 
     cursor: pointer;
 
-    box-shadow: 0 4px 14px rgba(112,83,72,.12);
+    box-shadow: 0 4px 14px rgba(112,83,72,.14);
 
     transition: background .3s ease, transform .3s ease, box-shadow .3s ease;
 }
@@ -708,25 +865,19 @@ h1 {
 .btn-abrir:hover {
     background: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(112,83,72,.18);
+    box-shadow: 0 8px 20px rgba(112,83,72,.2);
 }
 
 .btn-abrir:focus-visible,
 .btn-musica:focus-visible {
-    outline: 2px solid #85645e;
+    outline: 2px solid var(--vino);
     outline-offset: 3px;
 }
-
-/* Al abrir: la portada se desvanece y las flores se abren hacia afuera */
 
 .portada.saliendo {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-}
-
-.portada.saliendo .esquina {
-    scale: 1.3;
 }
 
 html:not(.js) .portada {
@@ -735,14 +886,14 @@ html:not(.js) .portada {
 
 
 /* ============================================================
-   BOTÓN DE MÚSICA
+   BOTÓN DE MÚSICA · BARRA DE AVANCE · PÉTALOS
    ============================================================ */
 
 .btn-musica {
     position: fixed;
     top: 16px;
     right: 16px;
-    z-index: 50;
+    z-index: 70;
 
     width: 40px;
     height: 40px;
@@ -751,9 +902,9 @@ html:not(.js) .portada {
     align-items: center;
     justify-content: center;
 
-    color: #85645e;
+    color: var(--vino);
 
-    background: rgba(255,253,249,.85);
+    background: rgba(255,253,249,.88);
 
     border: 1px solid rgba(185,151,134,.5);
     border-radius: 50%;
@@ -790,8 +941,6 @@ html:not(.js) .portada {
     display: block;
 }
 
-/* anillo suave mientras suena */
-
 .btn-musica:not(.silencio)::after {
     content: "";
     position: absolute;
@@ -801,6 +950,32 @@ html:not(.js) .portada {
     border-radius: 50%;
 
     animation: onda 3.2s ease-out infinite;
+}
+
+.progreso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 60;
+
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(90deg, #e9a3b8, var(--fucsia));
+
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+#petalos {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
 }
 
 
@@ -816,7 +991,7 @@ html:not(.js) .portada {
 
     transition:
         opacity .9s ease,
-        transform 1s cubic-bezier(.2, .7, .2, 1);
+        transform 1s var(--suave);
 
     transition-delay: var(--d, 0s);
 }
@@ -830,48 +1005,80 @@ html:not(.js) .portada {
     transform: none;
 }
 
-/* Los separadores florales "laten" suavemente una vez visibles */
+/* Los nombres se "escriben" de izquierda a derecha
+   (el recorte va en el <span> interior para que el navegador detecte el bloque) */
 
-.separador.visible span {
-    animation: latido 4.5s ease-in-out 1.2s infinite;
+.js .reveal.escribir > span {
+    display: inline-block;
+
+    clip-path: inset(-30% 100% -30% -5%);
+
+    transition: clip-path 2.6s cubic-bezier(.55, 0, .25, 1);
+    transition-delay: calc(var(--d, 0s) + .2s);
+}
+
+.js .reveal.escribir.visible > span {
+    clip-path: inset(-30% -5% -30% -5%);
+}
+
+/* La ilustración se descubre de abajo hacia arriba */
+
+.js .arco-foto {
+    clip-path: inset(100% 0 0 0);
+    transition: clip-path 1.9s cubic-bezier(.65, 0, .25, 1) .15s;
+}
+
+.js .arco.visible .arco-foto {
+    clip-path: inset(0);
+}
+
+/* Las líneas de los separadores crecen desde la flor */
+
+.js .separador .linea {
+    transform: scaleX(0);
+    transition: transform 1.3s var(--suave) .35s;
+}
+
+.js .separador.visible .linea {
+    transform: scaleX(1);
+}
+
+.separador.visible .flor {
+    animation: latido 4.5s ease-in-out 1.4s infinite;
+}
+
+.portada .separador .linea {
+    transform: scaleX(1);
 }
 
 /* Las flores se abren al entrar y después se mecen despacio */
 
-.portada .esquina,
 body.abierta .marco-floral .esquina {
     animation:
-        florecer 1.7s cubic-bezier(.2, .7, .2, 1) var(--ret, 0s) backwards,
+        florecer 1.7s var(--suave) var(--ret, 0s) backwards,
         balanceo 8s ease-in-out calc(var(--ret, 0s) + 1.7s) infinite;
-}
-
-body.abierta .marco-floral .rama {
-    animation:
-        florecer 1.5s ease calc(var(--ret, 0s) + .6s) backwards,
-        balanceo 7s ease-in-out calc(var(--ret, 0s) + 2.1s) infinite;
 }
 
 body.abierta .marco-floral .mariposa {
     animation:
         aparecer 1.2s ease 1.6s backwards,
-        vuelo 16s ease-in-out 2.8s infinite alternate,
+        vuelo 18s ease-in-out 2.8s infinite alternate,
         aleteo .5s ease-in-out infinite alternate;
 }
 
-.mariposa.m2 { animation-duration: 1.2s, 19s, .55s !important; }
-.mariposa.m3 { animation-duration: 1.2s, 22s, .6s !important; }
+.mariposa.m2 { animation-duration: 1.2s, 21s, .55s !important; }
+.mariposa.m3 { animation-duration: 1.2s, 24s, .6s !important; }
 
 /* Texto de la portada */
 
 .portada-texto > * {
-    animation: subir 1.1s cubic-bezier(.2, .7, .2, 1) backwards;
+    animation: subir 1.1s var(--suave) backwards;
 }
 
 .portada-texto > :nth-child(1) { animation-delay: .5s; }
 .portada-texto > :nth-child(2) { animation-delay: .7s; }
 .portada-texto > :nth-child(3) { animation-delay: .9s; }
 .portada-texto > :nth-child(4) { animation-delay: 1.1s; }
-.portada-texto > :nth-child(5) { animation-delay: 1.3s; }
 
 @keyframes florecer {
     from { opacity: 0; scale: .55; }
@@ -898,6 +1105,21 @@ body.abierta .marco-floral .mariposa {
     50%      { transform: scale(1.14); }
 }
 
+@keyframes kenburns {
+    from { scale: 1; }
+    to   { scale: 1.07; }
+}
+
+@keyframes centelleo {
+    0%, 100% { opacity: 0;  transform: scale(.3) rotate(0deg); }
+    50%      { opacity: .95; transform: scale(1.15) rotate(45deg); }
+}
+
+@keyframes rodar {
+    from { opacity: 0; transform: translateY(-40%); }
+    to   { opacity: 1; transform: none; }
+}
+
 @keyframes vuelo {
     0%   { transform: translate(0, 0) rotate(-8deg); }
     33%  { transform: translate(34px, -22px) rotate(10deg); }
@@ -915,36 +1137,46 @@ body.abierta .marco-floral .mariposa {
     100% { transform: scale(1.5); opacity: 0; }
 }
 
-/* Respeto a quien prefiere menos movimiento */
+
+/* ============================================================
+   MENOS MOVIMIENTO (preferencia del dispositivo)
+   ============================================================ */
 
 @media (prefers-reduced-motion: reduce) {
 
     .js .reveal,
     .js .reveal.izq,
     .js .reveal.der,
-    .js .reveal.zoom {
+    .js .reveal.zoom,
+    .js .reveal.escribir > span,
+    .js .arco-foto,
+    .js .separador .linea {
         opacity: 1;
         transform: none;
+        clip-path: none;
         transition: none;
     }
 
-    .portada .esquina,
     .portada-texto > *,
+    body.abierta .arco-foto,
     body.abierta .marco-floral .esquina,
-    body.abierta .marco-floral .rama,
     body.abierta .marco-floral .mariposa,
-    .separador.visible span,
+    .separador.visible .flor,
+    .brillo,
     .btn-musica::after {
         animation: none !important;
     }
 
-    .portada {
-        transition: opacity .3s ease, visibility 0s linear .3s;
+    .cortina,
+    .escena-foto {
+        transition-duration: .4s;
     }
 }
 
 
-/* PANTALLAS PEQUEÑAS */
+/* ============================================================
+   PANTALLAS PEQUEÑAS
+   ============================================================ */
 
 @media (max-width: 360px) {
 
@@ -957,7 +1189,7 @@ body.abierta .marco-floral .mariposa {
     }
 
     .contenido {
-        padding: 95px 18px;
+        padding: 56px 16px 90px;
     }
 
     .ubicaciones-contenedor {
@@ -965,20 +1197,15 @@ body.abierta .marco-floral .mariposa {
     }
 
     .ubicacion p {
-        font-size: 10px;
-    }
-
-    .fecha {
-        font-size: 11px;
-        letter-spacing: 2px;
+        font-size: 14px;
     }
 
     .cuenta .u {
-        min-width: 40px;
+        min-width: 44px;
         padding: 0 8px;
     }
 
     .cuenta b {
-        font-size: 18px;
+        font-size: 22px;
     }
 }
